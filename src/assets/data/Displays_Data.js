@@ -1,4 +1,4 @@
-const imgSrc = require('../images/displays/');
+const imgSrc = '../images/displays/';
 
 const DISPLAYS = [
     {
