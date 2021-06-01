@@ -1,9 +1,13 @@
 import { Fragment } from "react";
+import FilmDisplayList from '../FilmDisplays/FilmDisplayList';
+import Card from '../UI/Card';
 
 const Main = (props) => {
   return (
-  <Fragment>
-  </Fragment>
+  <Card>
+    <FilmDisplayList displays={props.displays} />
+    <div>Bookmarks</div>
+  </Card>
   );
 };
 
