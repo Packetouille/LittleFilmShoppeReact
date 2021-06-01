@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import classes from "./FilmDisplayItem.module.css";
+import classes from "../Item.module.css";
 
-const FilmDisplayItem = (props) => {
+const BookmarkItem = (props) => {
   return (
     <Fragment>
       <div className={classes["item-name"]}>{props.title}</div>
@@ -16,4 +16,4 @@ const FilmDisplayItem = (props) => {
   );
 };
 
-export default FilmDisplayItem;
+export default BookmarkItem;

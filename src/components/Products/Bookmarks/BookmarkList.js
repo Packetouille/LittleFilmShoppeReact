@@ -1,13 +1,13 @@
 import { Fragment } from "react";
-import FilmDisplayItem from "./FilmDisplayItem";
-import classes from "./FilmDisplayList.module.css";
+import BookmarkItem from "./BookmarkItem";
+import classes from "../ItemList.module.css";
 
-const FilmDisplayList = (props) => {
+const BookmarkList = (props) => {
   return (
     <Fragment>
       <div className={classes.items}>
-        {props.displays.map((display) => (
-          <FilmDisplayItem
+        {props.bookmarks.map((display) => (
+          <BookmarkItem
             title={display.title}
             alt={display.alt}
             imgSrc={display.imgSrc}
@@ -19,4 +19,4 @@ const FilmDisplayList = (props) => {
   );
 };
 
-export default FilmDisplayList;
+export default BookmarkList;

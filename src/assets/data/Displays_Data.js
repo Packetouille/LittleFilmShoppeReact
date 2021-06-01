@@ -32,7 +32,7 @@ const DISPLAYS = [
   {
     id: Math.random(),
     title: "Red Tails",
-    imgSrc: `${imgSrc}Red Tails Style AF 2.png`,
+    imgSrc: `${imgSrc}Red Tails Style AF 4.png`,
     alt: 'Red Tails film cell display.',
     price: 45,
   },

@@ -18,7 +18,7 @@ const BOOKMARKS = [
   {
     id: Math.random(),
     title: "The Fly",
-    imgSrc: `${imgSrc}The Fly Bookmark 3.png`,
+    imgSrc: `${imgSrc}The Fly Bookmark 3.JPG`,
     alt: 'The Fly bookmark',
     price: 20,
   },
