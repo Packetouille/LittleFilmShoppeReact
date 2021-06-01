@@ -1,24 +1,25 @@
-import aliensImgSrc from '../images/bookmarks/Aliens Bookmark 3.png';
-import rearWindowImgSrc from '../images/bookmarks/Rear Window Bookmark 3.png';
-import flyImgSrc from '../images/bookmarks/The Fly Bookmark 3.JPG'
+const imgSrc = 'product_images/bookmarks/';
 
 const BOOKMARKS = [
   {
     id: Math.random(),
     title: "Aliens",
-    imgSrc: aliensImgSrc,
+    imgSrc: `${imgSrc}Aliens Bookmark 3.png`,
+    alt: 'Aliens bookmark',
     price: 20,
   },
   {
     id: Math.random(),
     title: "Rear Window",
-    imgSrc: rearWindowImgSrc,
+    imgSrc: `${imgSrc}Rear Window Bookmark 3.png`,
+    alt: 'Rear Window bookmark',
     price: 20,
   },
   {
     id: Math.random(),
     title: "The Fly",
-    imgSrc: flyImgSrc,
+    imgSrc: `${imgSrc}The Fly Bookmark 3.png`,
+    alt: 'The Fly bookmark',
     price: 20,
   },
 ];
