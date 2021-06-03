@@ -8,6 +8,7 @@ const FilmDisplayList = (props) => {
       <div className={classes.items}>
         {props.displays.map((display) => (
           <FilmDisplayItem
+            key={display.id}
             title={display.title}
             alt={display.alt}
             imgSrc={display.imgSrc}

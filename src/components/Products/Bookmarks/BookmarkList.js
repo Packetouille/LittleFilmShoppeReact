@@ -8,6 +8,7 @@ const BookmarkList = (props) => {
       <div className={classes.items}>
         {props.bookmarks.map((display) => (
           <BookmarkItem
+            key={display.id}
             title={display.title}
             alt={display.alt}
             imgSrc={display.imgSrc}
