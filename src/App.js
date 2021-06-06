@@ -7,9 +7,21 @@ import Main from "./components/Layout/Main";
 import Footer from "./components/Layout/Footer";
 
 const App = () => {
+  const homePageHandler = () => {
+    console.log('home clicked!');
+  };
+
+  const aboutPageHandler = () => {
+    console.log('about clicked!');
+  };
+
+  const shoppePageHandler = () => {
+    console.log('shoppe clicked!');
+  };
+
   return (
     <Fragment>
-      <Header />
+      <Header onHomeHandler={homePageHandler} onAboutHandler={aboutPageHandler} onShoppeHandler={shoppePageHandler} />
       <Main displays={DISPLAYS} bookmarks={BOOKMARKS} />
       <Footer />
     </Fragment>

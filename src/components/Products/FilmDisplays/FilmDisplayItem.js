@@ -8,7 +8,7 @@ const FilmDisplayItem = (props) => {
       <img className={classes["item-img"]} src={props.imgSrc} alt={props.alt} />
       <div className={classes["item-details"]}>
         <span className={classes["item-price"]}>${props.price}</span>
-        <button role="button" className={`${classes["btn"]} ${classes["item-btn"]}`} type="button">
+        <button className={`${classes["btn"]} ${classes["item-btn"]}`} type="button">
           ADD TO CART
         </button>
       </div>

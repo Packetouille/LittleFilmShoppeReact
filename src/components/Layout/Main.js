@@ -1,44 +1,34 @@
 import React, { useReducer } from "react";
-import FilmDisplayList from "../Products/FilmDisplays/FilmDisplayList";
-import BookmarkList from "../Products/Bookmarks/BookmarkList";
-import Button from '../UI/Button';
+import Home from '../Pages/Home';
+import Shoppe from '../Pages/Shoppe';
 import Card from "../UI/Card";
-import classes from "./Main.module.css";
 
 const itemReducer = (state, action) => {
-  if (action.item === "FILM_DISPLAYS") {
-    return { item: "FILM_DISPLAYS" };
+  if (action.page === "home") {
+    return { page: "home" };
   }
-  if (action.item === "BOOKMARKS") {
-    return { item: "BOOKMARKS" };
+  if (action.page === "about") {
+    return { page: "about" };
   }
-  return { item: "FILM_DISPLAYS" };
+  if (action.page === "shoppe") {
+    return { page: "shoppe" };
+  }
+  return { page: "home" };
 };
 
 const Main = (props) => {
-  const [itemDisplayState, dispatchItemDisplay] = useReducer(itemReducer, {
-    item: "FILM_DISPLAYS",
+  const [pageDisplayState, dispatchPageDisplay] = useReducer(itemReducer, {
+    page: "shoppe",
   });
 
-  const displaysHandler = () => {
-    dispatchItemDisplay({ item: "FILM_DISPLAYS" });
-  };
-
-  const bookmarksHandler = () => {
-    dispatchItemDisplay({ item: "BOOKMARKS" });
+  const pageHandler = (event) => {
+    dispatchPageDisplay({ page: "shoppe" });
   };
 
   return (
     <Card>
-      <div className={classes.items}>
-        <Button type="button" onClick={displaysHandler}>Film Displays</Button>
-        <Button type="button" onClick={bookmarksHandler}>Bookmarks</Button>
-        {itemDisplayState.item === "FILM_DISPLAYS" ? (
-          <FilmDisplayList displays={props.displays} />
-        ) : itemDisplayState.item === "BOOKMARKS" ? (
-          <BookmarkList bookmarks={props.bookmarks} />
-        ) : null}
-      </div>
+      {(pageDisplayState.page === 'home') ? <Home /> 
+        : (pageDisplayState.page === 'shoppe') ? <Shoppe displays={props.displays} bookmarks={props.bookmarks} /> : null}
     </Card>
   );
 };
